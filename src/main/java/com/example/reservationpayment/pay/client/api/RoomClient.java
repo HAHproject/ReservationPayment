@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 import java.util.UUID;
 
-@FeignClient("MENU-SERVICE")
+@FeignClient("ROOM-SERVICE")
 public interface RoomClient {
     @GetMapping("/api/v1/room/ids")
     List<Room> getAllByIds(

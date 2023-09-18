@@ -79,8 +79,9 @@ public class PaymentService {
         Payment save = paymentRepository.save(request.toEntity(tokenInfo));
         OrderRequest orderRequest = new OrderRequest();
         orderRequest.setPrice(save.getPrice());
+        orderRequest.setPNumber(save.getPNumber());
         orderRequest.setAmenityId(save.getAmenityId());
-        orderRequest.setCustomerId(save.getCustomerId().toString());
+        orderRequest.setCustomerId(save.getCustomerId());
         orderCommandClient.save(orderRequest);
     }
 }

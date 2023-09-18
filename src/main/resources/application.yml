@@ -4,14 +4,14 @@ server:
 
 spring:
   application:
-    name: payment-service
+    name: order-command-service
   datasource:
-    url: jdbc:mysql://localhost:3306/pay?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/payment?serverTimezone=Asia/Seoul
     username: root
     password: 1q2w3e4r!!
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     show-sql: true
 
 eureka:

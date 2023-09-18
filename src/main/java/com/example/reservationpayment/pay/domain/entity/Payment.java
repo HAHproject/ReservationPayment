@@ -18,4 +18,5 @@ public class Payment {
     private UUID amenityId;
     private UUID roomId;
     private UUID customerId;
+    private String pNumber;
 }
